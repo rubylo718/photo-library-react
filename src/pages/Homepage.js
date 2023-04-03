@@ -53,7 +53,7 @@ const Homepage = () => {
 					})}
 			</div>
 			<div className="morePicture">
-				<button onClick={morePicture}>更多圖片</button>
+				<button onClick={morePicture}>Load More</button>
 			</div>
 		</div>
 	);
