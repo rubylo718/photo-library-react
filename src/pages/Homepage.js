@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Search from "../components/Search";
 import Picture from "../components/Picture";
@@ -12,9 +12,12 @@ const Homepage = () => {
 		let result = await axios.get(initialURL, {
 			headers: { Authorization: auth },
 		});
-		console.log(result.data.photos);
 		setData(result.data.photos);
 	};
+
+	useEffect(() => {
+		search();
+	}, []);
 
 	return (
 		<div style={{ minHeight: "100vh" }}>
